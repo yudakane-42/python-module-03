@@ -1,25 +1,25 @@
 #! /usr/bin/env python3
 
 
-def my_command_quest() -> None:
-
+def my_command_quest():
+    
     import sys
-
-    args = sys.argv
-
-    argc = len(args)
+    argv = sys.argv
+    argc = len(argv)
 
     print("=== Command Quest ===")
-    print(f"Program name: {args[0]}")
+    print(f"Program name: {argv[0]}")
+
     if argc == 1:
         print("No arguments provided!")
     else:
-        print(f"Arguments received: {argc - 1}")
+        print(f"Argument received: {argc - 1}")
         i = 1
         while i < argc:
-            print(f"Argument {i}: {args[i]}")
+            print(f"Argument {i}: {argv[i]}")
             i += 1
-    print(f"Total arguments :{argc}\n")
+
+    print(f"Total arguments: {argc}\n")
 
 
 if __name__ == "__main__":
